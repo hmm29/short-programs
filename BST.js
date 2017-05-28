@@ -108,19 +108,19 @@ BinarySearchTree.prototype.findInOrderSuccessor = function(inputNode) {
       return null;
     }
 
-  	let res = null;
-  	let root = this.root;
+    let res = null;
+    let root = this.root;
 
-  	while(root) {
-         if(inputNode.key < root.key) {
-           res = root.key;
-           root = root.left;
-         } else {
-           root = root.right;
-         }
-   	}
+    while(root) {
+      if(inputNode.key < root.key) {
+        res = root.key;
+        root = root.left;
+      } else {
+        root = root.right;
+      }
+    }
 
-  	return res;
+    return res;
 }
 
 /*********************************************
