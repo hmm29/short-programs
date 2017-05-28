@@ -26,7 +26,7 @@ function BinarySearchTree() {
 // Creates a new node by a key and inserts it to the BST
 BinarySearchTree.prototype.insert = function(key) {
 
-    var root = this.root;
+    let root = this.root;
 
     // 1. If the tree is empty, create the root
     if(!root) {
@@ -37,8 +37,8 @@ BinarySearchTree.prototype.insert = function(key) {
     // 2) Otherwise, create a node with the key
     //    and traverse down the tree to find where to
     //    to insert it
-    var currentNode = root;
-    var newNode = new Node(key);
+    let currentNode = root;
+    let newNode = new Node(key);
 
     while(currentNode !== null) {
         if(key < currentNode.key) {
@@ -65,7 +65,7 @@ BinarySearchTree.prototype.insert = function(key) {
 // Use this fuction when you need a node to test your
 // findInOrderSuccessor function on.
 BinarySearchTree.prototype.getNodeByKey = function(key) {
-    var currentNode = this.root;
+    let currentNode = this.root;
 
     while(currentNode) {
         if(key === currentNode.key) {
@@ -104,7 +104,7 @@ BinarySearchTree.findInorderPredecessor = function(inputNode) {
 }
 
 BinarySearchTree.prototype.findInOrderSuccessor = function(inputNode) {
-  	if(inputNode === null) {
+    if(inputNode === null) {
       return null;
     }
 
@@ -128,7 +128,7 @@ BinarySearchTree.prototype.findInOrderSuccessor = function(inputNode) {
  *********************************************/
 
 // Create a Binary Search Tree
-var bst = new BinarySearchTree();
+let bst = new BinarySearchTree();
 bst.insert(20);
 bst.insert(9);
 bst.insert(25);
@@ -138,10 +138,10 @@ bst.insert(11);
 bst.insert(14);
 
 // Get a reference to the node whose key is 9
-var test = bst.getNodeByKey(9);
+let test = bst.getNodeByKey(9);
 
 // Find the in order successor of test
-var succ = node ? bst.findInOrderSuccessor(test) : null;
+let succ = node ? bst.findInOrderSuccessor(test) : null;
 
 // Print the key of the successor node
 if(succ) {
