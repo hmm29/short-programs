@@ -88,8 +88,8 @@ BinarySearchTree.findInorderPredecessor = function(inputNode) {
     return null;
   }
 
-  let res = null;
-  let root = this.root;
+  let res = null,
+      root = this.root;
 
   while(root) {
        if(inputNode.key > root.key) {
@@ -108,8 +108,8 @@ BinarySearchTree.prototype.findInOrderSuccessor = function(inputNode) {
       return null;
     }
 
-    let res = null;
-    let root = this.root;
+    let res = null,
+        root = this.root;
 
     while(root) {
       if(inputNode.key < root.key) {
